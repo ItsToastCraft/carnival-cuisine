@@ -1,0 +1,73 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"hot_dog": "carnival-additions:item/hot_dog",
+		"particle": "#hot_dog"
+	},
+	"elements": [
+		{
+			"from": [5, 0, 2],
+			"to": [9, 3, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 0, 5]},
+			"faces": {
+				"north": {"uv": [0, 6, 2, 7.5], "texture": "#hot_dog"},
+				"east": {"uv": [4, 0, 10, 1.5], "texture": "#hot_dog"},
+				"south": {"uv": [2, 6, 4, 7.5], "texture": "#hot_dog"},
+				"west": {"uv": [4, 1.5, 10, 3], "texture": "#hot_dog"},
+				"up": {"uv": [2, 6, 0, 0], "texture": "#hot_dog"},
+				"down": {"uv": [4, 0, 2, 6], "texture": "#hot_dog"}
+			}
+		},
+		{
+			"from": [6, 1.5, 1],
+			"to": [8, 3.5, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 1.5, 11]},
+			"faces": {
+				"north": {"uv": [7, 6, 6, 7], "texture": "#hot_dog"},
+				"east": {"uv": [11, 3, 4, 4], "texture": "#hot_dog"},
+				"south": {"uv": [7, 5, 6, 6], "texture": "#hot_dog"},
+				"west": {"uv": [11, 4, 4, 5], "texture": "#hot_dog"},
+				"up": {"uv": [5, 5, 4, 12], "texture": "#hot_dog"},
+				"down": {"uv": [6, 12, 5, 5], "texture": "#hot_dog"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, -45, 0],
+			"translation": [0, 2.5, 2],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, -45, 0],
+			"translation": [0, 2.5, 2],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -135, 0],
+			"translation": [0, 4, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 45, 0],
+			"translation": [0, 4, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"rotation": [0, 90, 0],
+			"translation": [0.5, 0, -7.5]
+		},
+		"fixed": {
+			"rotation": [180, -90, 180]
+		}
+	}
+}
