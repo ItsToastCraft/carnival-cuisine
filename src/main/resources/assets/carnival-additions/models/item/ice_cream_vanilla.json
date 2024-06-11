@@ -1,0 +1,6 @@
+{
+  "parent": "carnival-additions:item/ice_cream_cone",
+  "textures": {
+    "ice_cream": "carnival-additions:item/ice_cream_vanilla"
+  }
+}
