@@ -1,5 +1,6 @@
 package com.carnivaladditions;
 
+import com.carnivaladditions.registries.CarnivalAdditionsBlocks;
 import com.carnivaladditions.registries.CarnivalAdditionsItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -22,7 +23,7 @@ public class CarnivalAdditions implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		CarnivalAdditionsItems.registerItems();
-		LOGGER.info("Hello Fabric world!");
+		CarnivalAdditionsBlocks.registerBlocks();
 		Registry.register(Registries.ITEM_GROUP, Identifier.of(MOD_ID, "items"), CarnivalAdditionsItems.CARNIVAL_ADDITIONS_GROUP);
 
 	}
