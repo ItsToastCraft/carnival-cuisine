@@ -2,14 +2,14 @@
 	"schemaVersion": 1,
 	"id": "carnival-additions",
 	"version": "${version}",
-	"name": "Carnival Additions",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Carnival Cuisine",
+	"description": "Adds food and drinks from carnivals to Minecraft!",
 	"authors": [
-		"Me!"
+		"ToastTextures"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/ItsToastCraft/carnival-additions-1.21"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/carnival-additions/icon.png",
