@@ -1,0 +1,6 @@
+{
+  "parent": "carnival-additions:item/popcorn_bucket",
+  "textures": {
+    "popcorn": "carnival-additions:item/popcorn"
+  }
+}

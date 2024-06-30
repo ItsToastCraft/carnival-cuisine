@@ -1,9 +1,9 @@
 package com.carnivaladditions.blocks.tray;
 
+import com.carnivaladditions.CarnivalAdditions;
 import com.carnivaladditions.blocks.ImplementedInventory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
@@ -15,19 +15,20 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class TrayEntity extends BlockEntity implements ImplementedInventory {
+public class TrayEntity extends BlockEntity implements ImplementedInventory {
     protected DefaultedList<ItemStack> items;
 
 
-    public TrayEntity(BlockEntityType<?> blockEntity, BlockPos pos, BlockState state, int invSize) {
-        super(blockEntity, pos, state);
-        this.items = DefaultedList.ofSize(invSize, ItemStack.EMPTY);
+    public TrayEntity(BlockPos pos, BlockState state) {
+        super(CarnivalAdditions.TRAY_ENTITY, pos, state);
+        this.items = DefaultedList.ofSize(3, ItemStack.EMPTY);
     }
 
 
     public DefaultedList<ItemStack> getItems() {
         return this.items;
     }
+
 
     public void setItems(DefaultedList<ItemStack> items) { this.items = items;}
 
@@ -46,6 +47,7 @@ public abstract class TrayEntity extends BlockEntity implements ImplementedInven
         super.writeNbt(nbt, registryLookup);
     }
 
+
     @Nullable
     @Override
     public Packet<ClientPlayPacketListener> toUpdatePacket() {
@@ -54,6 +56,6 @@ public abstract class TrayEntity extends BlockEntity implements ImplementedInven
 
     @Override
     public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
-        return new NbtCompound();
+        return createNbt(registryLookup);
     }
 }

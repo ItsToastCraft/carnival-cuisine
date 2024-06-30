@@ -21,6 +21,7 @@ public class CarnivalAdditionsBlocks {
     public static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         CarnivalAdditionsBlocks.BLOCKS.add(block);
+        CarnivalAdditionsItems.ITEMS.add(block.asItem());
         return Registry.register(Registries.BLOCK, Identifier.of(CarnivalAdditions.MOD_ID, name), block);
     }
 

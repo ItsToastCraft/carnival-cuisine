@@ -1,0 +1,106 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"popcorn": "carnival-additions:item/popcorn_bucket",
+		"particle": "#popcorn"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 4],
+			"to": [12, 8, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 4]},
+			"faces": {
+				"north": {"uv": [5, 0, 9, 4], "texture": "#popcorn"},
+				"east": {"uv": [5, 4, 9, 8], "texture": "#popcorn"},
+				"south": {"uv": [5, 8, 9, 12], "texture": "#popcorn"},
+				"west": {"uv": [9, 0, 13, 4], "texture": "#popcorn"},
+				"up": {"uv": [13, 8, 9, 4], "texture": "#popcorn"},
+				"down": {"uv": [13, 4, 9, 8], "texture": "#popcorn"}
+			}
+		},
+		{
+			"from": [3, 8, 3],
+			"to": [13, 9, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 8, 4]},
+			"faces": {
+				"north": {"uv": [9, 10.5, 14, 11], "texture": "#popcorn"},
+				"east": {"uv": [11, 8, 16, 8.5], "texture": "#popcorn"},
+				"south": {"uv": [11, 8.5, 16, 9], "texture": "#popcorn"},
+				"west": {"uv": [9, 11, 14, 11.5], "texture": "#popcorn"},
+				"up": {"uv": [5, 5, 0, 0], "texture": "#popcorn"},
+				"down": {"uv": [5, 5, 0, 10], "texture": "#popcorn"}
+			}
+		},
+		{
+			"from": [5, 9, 7],
+			"to": [9, 11, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 9, 4]},
+			"faces": {
+				"north": {"uv": [2, 10, 4, 11], "texture": "#popcorn"},
+				"east": {"uv": [2, 11, 4, 12], "texture": "#popcorn"},
+				"south": {"uv": [11, 9, 13, 10], "texture": "#popcorn"},
+				"west": {"uv": [9, 11.5, 11, 12.5], "texture": "#popcorn"},
+				"up": {"uv": [2, 12, 0, 10], "texture": "#popcorn"},
+				"down": {"uv": [8, 12, 6, 14], "texture": "#popcorn"}
+			}
+		},
+		{
+			"from": [7, 9, 5],
+			"to": [11, 10, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 9, 4]},
+			"faces": {
+				"north": {"uv": [0, 12, 2, 12.5], "texture": "#popcorn"},
+				"east": {"uv": [11, 10, 13.5, 10.5], "texture": "#popcorn"},
+				"south": {"uv": [2, 12, 4, 12.5], "texture": "#popcorn"},
+				"west": {"uv": [11, 11.5, 13.5, 12], "texture": "#popcorn"},
+				"up": {"uv": [11, 10.5, 9, 8], "texture": "#popcorn"},
+				"down": {"uv": [4, 10, 2, 12.5], "texture": "#popcorn"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"translation": [0, 2, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 225, 0],
+			"translation": [0, 2, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"head": {
+			"translation": [0, 6.5, 0]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "Popcorn",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		}
+	]
+}
