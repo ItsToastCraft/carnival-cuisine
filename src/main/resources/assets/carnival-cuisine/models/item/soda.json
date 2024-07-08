@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"soda": "carnival-additions:item/soda_red"
+		"soda": "carnival-cuisine:item/soda_red"
 	},
 	"elements": [
 		{

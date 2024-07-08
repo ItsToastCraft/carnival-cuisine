@@ -1,0 +1,6 @@
+{
+  "parent": "carnival-cuisine:item/soda",
+  "textures": {
+    "soda": "carnival-cuisine:item/soda_green"
+  }
+}

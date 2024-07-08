@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"tray": "carnival-additions:block/tray",
+		"tray": "carnival-cuisine:block/tray",
 		"particle": "#tray"
 	},
 	"elements": [

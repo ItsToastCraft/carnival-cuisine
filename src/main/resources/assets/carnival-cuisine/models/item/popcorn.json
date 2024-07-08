@@ -1,0 +1,6 @@
+{
+  "parent": "carnival-cuisine:item/popcorn_bucket",
+  "textures": {
+    "popcorn": "carnival-cuisine:item/popcorn"
+  }
+}

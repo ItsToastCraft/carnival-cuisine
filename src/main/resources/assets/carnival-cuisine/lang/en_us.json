@@ -1,0 +1,19 @@
+{
+  "item.carnival-cuisine.burger": "Burger",
+  "item.carnival-cuisine.hot_dog": "Hot Dog",
+  "item.carnival-cuisine.hot_dog_ketchup": "Hot Dog with Ketchup",
+  "item.carnival-cuisine.hot_dog_mustard": "Hot Dog with Mustard",
+  "item.carnival-cuisine.lemonade": "Lemonade",
+  "item.carnival-cuisine.soda": "Soda",
+  "item.carnival-cuisine.ice_cream_cone": "Ice Cream Cone",
+  "item.carnival-cuisine.ice_cream_vanilla": "Vanilla Ice Cream",
+  "item.carnival-cuisine.ice_cream_chocolate": "Chocolate Ice Cream",
+  "item.carnival-cuisine.ice_cream_strawberry": "Strawberry Ice Cream",
+  "item.carnival-cuisine.fries": "Fries",
+  "item.carnival-cuisine.popcorn_bucket": "Popcorn Bucket",
+  "item.carnival-cuisine.popcorn": "Popcorn",
+
+  "block.carnival-cuisine.tray": "Tray",
+
+  "itemGroup.carnival-cuisine.items": "Carnival Cuisine"
+}

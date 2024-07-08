@@ -1,6 +1,0 @@
-{
-  "parent": "carnival-additions:item/soda",
-  "textures": {
-    "soda": "carnival-additions:item/soda_green"
-  }
-}

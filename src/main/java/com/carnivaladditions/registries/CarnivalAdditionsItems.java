@@ -41,7 +41,7 @@ public class CarnivalAdditionsItems {
     public static void registerItems() {}
     public static final ItemGroup CARNIVAL_ADDITIONS_GROUP = FabricItemGroup.builder()
             .icon(() -> new ItemStack(BURGER))
-            .displayName(Text.translatable("itemGroup.carnival-additions.items"))
+            .displayName(Text.translatable("itemGroup.carnival-cuisine.items"))
             .entries((context, entries) -> {
                 for (Item item : ITEMS) {
                     entries.add(item);

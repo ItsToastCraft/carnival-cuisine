@@ -17,6 +17,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class TrayEntity extends BlockEntity implements ImplementedInventory {
     protected DefaultedList<ItemStack> items;
+    protected NbtCompound nbtCompound;
 
 
     public TrayEntity(BlockPos pos, BlockState state) {
@@ -43,7 +44,7 @@ public class TrayEntity extends BlockEntity implements ImplementedInventory {
     @Override
     public void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         Inventories.writeNbt(nbt, this.items, registryLookup);
-
+        nbtCompound = nbt;
         super.writeNbt(nbt, registryLookup);
     }
 

@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "carnival-additions",
+	"id": "carnival-cuisine",
 	"version": "${version}",
 	"name": "Carnival Cuisine",
 	"description": "Adds food and drinks from carnivals to Minecraft!",
@@ -8,11 +8,11 @@
 		"ToastTextures"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://github.com/ItsToastCraft/carnival-additions-1.21",
 		"sources": "https://github.com/ItsToastCraft/carnival-additions-1.21"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/carnival-additions/icon.png",
+	"license": "GNU GPL-3.0",
+	"icon": "assets/carnival-cuisine/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -26,9 +26,9 @@
 		]
 	},
 	"mixins": [
-		"carnival-additions.mixins.json",
+		"carnival-cuisine.mixins.json",
 		{
-			"config": "carnival-additions.client.mixins.json",
+			"config": "carnival-cuisine.client.mixins.json",
 			"environment": "client"
 		}
 	],

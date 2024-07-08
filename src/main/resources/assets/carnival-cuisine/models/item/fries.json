@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"particle": "carnival-additions:item/fries",
-		"fries": "carnival-additions:item/fries"
+		"particle": "carnival-cuisine:item/fries",
+		"fries": "carnival-cuisine:item/fries"
 	},
 	"elements": [
 		{

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "carnival-cuisine:block/tray", "uvlock": false },
+    "facing=east":  { "model": "carnival-cuisine:block/tray", "y":  90, "uvlock": false },
+    "facing=south": { "model": "carnival-cuisine:block/tray", "y": 180, "uvlock": false },
+    "facing=west":  { "model": "carnival-cuisine:block/tray", "y": 270, "uvlock": false }
+  }
+}

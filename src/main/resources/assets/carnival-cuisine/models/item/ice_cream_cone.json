@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"ice_cream": "carnival-additions:item/ice_cream_cone",
+		"ice_cream": "carnival-cuisine:item/ice_cream_cone",
 		"particle": "#ice_cream"
 	},
 	"elements": [
