@@ -1,6 +1,5 @@
 package com.carnivaladditions.blocks.tray;
 
-import com.carnivaladditions.CarnivalAdditions;
 import com.carnivaladditions.items.Drink;
 import com.carnivaladditions.items.Food;
 import com.carnivaladditions.items.Side;
@@ -30,9 +29,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Objects;
 
 public class Tray extends HorizontalFacingBlock implements BlockEntityProvider {
-    protected Vec3d mainSlot = new Vec3d(0.1875f, 0.0625f, 0.3125f);
-    protected Vec3d sideSlot = new Vec3d(0.75f, 0.0625f, 0.625f);
-    protected Vec3d drinkSlot = new Vec3d(0.75f, 0.0625f, 0.3125f);
 
     private final Vec3d[][] slotPos = {
             {new Vec3d(0.1875f, 0.0625f, 0.3125f), new Vec3d(0.3125f, 0.0625f, 0.8125f), new Vec3d(0.8125f, 0.0625f, 0.6875f), new Vec3d(0.6875f, 0.0625f, 0.1875f)},
