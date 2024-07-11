@@ -88,12 +88,13 @@ public class Tray extends HorizontalFacingBlock implements BlockEntityProvider {
 
             if (player.isSneaking()) {
                 ItemStack newItem = new ItemStack(this.asItem(), 1);
+                newItem.applyComponentsFrom(blockEntity.getComponents());
+                NbtCompound blockComponents = blockEntity.nbtCompound;
+                blockComponents.putString("id", "carnival-cuisine:tray");
 
-                NbtCompound a = blockEntity.nbtCompound;
-                a.putString("id", "carnival-cuisine:tray");
-                newItem.set(DataComponentTypes.BLOCK_ENTITY_DATA, NbtComponent.of(blockEntity.nbtCompound));
+                newItem.set(DataComponentTypes.BLOCK_ENTITY_DATA, NbtComponent.of(blockComponents));
 
-                world.breakBlock(pos, true);
+                world.breakBlock(pos, false);
                 player.getInventory().insertStack(newItem);
                 return ItemActionResult.FAIL;
             }
