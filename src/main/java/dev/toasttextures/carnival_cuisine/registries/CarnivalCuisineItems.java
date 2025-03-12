@@ -1,9 +1,9 @@
-package com.carnivaladditions.registries;
+package dev.toasttextures.carnival_cuisine.registries;
 
-import com.carnivaladditions.CarnivalAdditions;
-import com.carnivaladditions.items.Drink;
-import com.carnivaladditions.items.Food;
-import com.carnivaladditions.items.Side;
+import dev.toasttextures.carnival_cuisine.CarnivalCuisine;
+import dev.toasttextures.carnival_cuisine.items.Drink;
+import dev.toasttextures.carnival_cuisine.items.Food;
+import dev.toasttextures.carnival_cuisine.items.Side;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.*;
@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarnivalAdditionsItems {
+public class CarnivalCuisineItems {
     public static final List<Item> ITEMS = new ArrayList<>();
 
     public static final Item LEMONADE = registerItem("lemonade", new Drink(new Item.Settings().food(new FoodComponent.Builder().nutrition(2).build())));
@@ -34,9 +34,9 @@ public class CarnivalAdditionsItems {
     public static final Item POPCORN = registerItem("popcorn", new Side(new Item.Settings().food(new FoodComponent.Builder().nutrition(4).saturationModifier(0.1f).usingConvertsTo(POPCORN_BUCKET).build())));
 
     private static Item registerItem(String name, Item item) {
-        CarnivalAdditionsItems.ITEMS.add(item);
+        CarnivalCuisineItems.ITEMS.add(item);
 
-        return Registry.register(Registries.ITEM, Identifier.of(CarnivalAdditions.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, Identifier.of(CarnivalCuisine.MOD_ID, name), item);
     }
     public static void registerItems() {}
     public static final ItemGroup CARNIVAL_ADDITIONS_GROUP = FabricItemGroup.builder()

@@ -1,7 +1,7 @@
-package com.carnivaladditions.registries;
+package dev.toasttextures.carnival_cuisine.registries;
 
-import com.carnivaladditions.CarnivalAdditions;
-import com.carnivaladditions.blocks.tray.Tray;
+import dev.toasttextures.carnival_cuisine.CarnivalCuisine;
+import dev.toasttextures.carnival_cuisine.blocks.tray.Tray;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -13,20 +13,20 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarnivalAdditionsBlocks {
+public class CarnivalCuisineBlocks {
     public static final List<Block> BLOCKS = new ArrayList<>();
 
     public static final Block TRAY = registerBlock("tray", new Tray(AbstractBlock.Settings.create()));
 
     public static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        CarnivalAdditionsBlocks.BLOCKS.add(block);
-        CarnivalAdditionsItems.ITEMS.add(block.asItem());
-        return Registry.register(Registries.BLOCK, Identifier.of(CarnivalAdditions.MOD_ID, name), block);
+        BLOCKS.add(block);
+        CarnivalCuisineItems.ITEMS.add(block.asItem());
+        return Registry.register(Registries.BLOCK, Identifier.of(CarnivalCuisine.MOD_ID, name), block);
     }
 
-    public static Item registerBlockItem(String name, Block block) {
-        return Registry.register(Registries.ITEM, Identifier.of(CarnivalAdditions.MOD_ID, name), new BlockItem(block, new Item.Settings()));
+    public static void registerBlockItem(String name, Block block) {
+        Registry.register(Registries.ITEM, Identifier.of(CarnivalCuisine.MOD_ID, name), new BlockItem(block, new Item.Settings()));
     }
     public static void registerBlocks() { }
 

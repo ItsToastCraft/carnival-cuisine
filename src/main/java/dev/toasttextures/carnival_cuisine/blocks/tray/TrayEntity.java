@@ -1,7 +1,7 @@
-package com.carnivaladditions.blocks.tray;
+package dev.toasttextures.carnival_cuisine.blocks.tray;
 
-import com.carnivaladditions.CarnivalAdditions;
-import com.carnivaladditions.blocks.ImplementedInventory;
+import dev.toasttextures.carnival_cuisine.CarnivalCuisine;
+import dev.toasttextures.carnival_cuisine.blocks.ImplementedInventory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.inventory.Inventories;
@@ -21,7 +21,7 @@ public class TrayEntity extends BlockEntity implements ImplementedInventory {
 
 
     public TrayEntity(BlockPos pos, BlockState state) {
-        super(CarnivalAdditions.TRAY_ENTITY, pos, state);
+        super(CarnivalCuisine.TRAY_ENTITY, pos, state);
         this.items = DefaultedList.ofSize(3, ItemStack.EMPTY);
     }
 

@@ -1,4 +1,4 @@
-package com.carnivaladditions.blocks.tray;
+package dev.toasttextures.carnival_cuisine.blocks.tray;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.VertexConsumerProvider;

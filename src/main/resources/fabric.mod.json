@@ -11,30 +11,20 @@
 		"homepage": "https://github.com/ItsToastCraft/carnival-additions-1.21",
 		"sources": "https://github.com/ItsToastCraft/carnival-additions-1.21"
 	},
-	"license": "GNU GPL-3.0",
+	"license": "LGPL-3.0",
 	"icon": "assets/carnival-cuisine/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.carnivaladditions.CarnivalAdditions"
+			"dev.toasttextures.carnival_cuisine.CarnivalCuisine"
 		],
 		"client": [
-			"com.carnivaladditions.CarnivalAdditionsClient"
-		],
-		"fabric-datagen": [
-			"com.carnivaladditions.CarnivalAdditionsDataGenerator"
+			"dev.toasttextures.carnival_cuisine.CarnivalCuisineClient"
 		]
 	},
-	"mixins": [
-		"carnival-cuisine.mixins.json",
-		{
-			"config": "carnival-cuisine.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.21-",
+		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
 	},

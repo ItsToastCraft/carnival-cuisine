@@ -1,9 +1,7 @@
-package com.carnivaladditions.blocks.tray;
+package dev.toasttextures.carnival_cuisine.blocks.tray;
 
-import com.carnivaladditions.items.Drink;
-import com.carnivaladditions.items.Food;
-import com.carnivaladditions.items.Side;
 import com.mojang.serialization.MapCodec;
+import dev.toasttextures.carnival_cuisine.items.*;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.component.DataComponentTypes;
@@ -29,7 +27,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Objects;
 
 public class Tray extends HorizontalFacingBlock implements BlockEntityProvider {
-
+    public static final MapCodec<Tray> CODEC = createCodec(Tray::new);
     private final Vec3d[][] slotPos = {
             {new Vec3d(0.1875f, 0.0625f, 0.3125f), new Vec3d(0.3125f, 0.0625f, 0.8125f), new Vec3d(0.8125f, 0.0625f, 0.6875f), new Vec3d(0.6875f, 0.0625f, 0.1875f)},
             {new Vec3d(0.75f, 0.0625f, 0.625f), new Vec3d(0.625f, 0.0625f, 0.25f), new Vec3d(0.25f, 0.0625f, 0.375f), new Vec3d(0.375f, 0.0625f, 0.75f)},
@@ -44,7 +42,7 @@ public class Tray extends HorizontalFacingBlock implements BlockEntityProvider {
 
     @Override
     protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
-        return null;
+        return CODEC;
     }
 
     @Override
@@ -54,13 +52,10 @@ public class Tray extends HorizontalFacingBlock implements BlockEntityProvider {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
-        Direction dir = state.get(FACING);
-        return switch (dir) {
+        return switch (state.get(Properties.HORIZONTAL_FACING)) {
             case NORTH, SOUTH -> VoxelShapes.cuboid(0.0625f, 0f, 0.1875f, 0.9375f, 0.0625f, 0.8125f);
-            case EAST, WEST -> VoxelShapes.cuboid(0.1875f, 0f, 0.0625f, 0.8125f, 0.0625f, 0.9375f);
-            default -> VoxelShapes.fullCube();
+            default -> VoxelShapes.cuboid(0.1875f, 0f, 0.0625f, 0.8125f, 0.0625f, 0.9375f);
         };
-
     }
 
     @Override

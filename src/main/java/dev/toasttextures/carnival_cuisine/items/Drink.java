@@ -1,4 +1,4 @@
-package com.carnivaladditions.items;
+package dev.toasttextures.carnival_cuisine.items;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
