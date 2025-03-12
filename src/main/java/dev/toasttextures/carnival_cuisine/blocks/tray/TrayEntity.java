@@ -19,17 +19,14 @@ public class TrayEntity extends BlockEntity implements ImplementedInventory {
     protected DefaultedList<ItemStack> items;
     protected NbtCompound nbtCompound;
 
-
     public TrayEntity(BlockPos pos, BlockState state) {
         super(CarnivalCuisine.TRAY_ENTITY, pos, state);
         this.items = DefaultedList.ofSize(3, ItemStack.EMPTY);
     }
 
-
     public DefaultedList<ItemStack> getItems() {
         return this.items;
     }
-
 
     public void setItems(DefaultedList<ItemStack> items) { this.items = items;}
 

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "carnival-cuisine:block/napkin_holder", "uvlock": false },
+    "facing=east":  { "model": "carnival-cuisine:block/napkin_holder", "y":  90, "uvlock": false },
+    "facing=south": { "model": "carnival-cuisine:block/napkin_holder", "y": 180, "uvlock": false },
+    "facing=west":  { "model": "carnival-cuisine:block/napkin_holder", "y": 270, "uvlock": false }
+  }
+}

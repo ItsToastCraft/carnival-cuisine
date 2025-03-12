@@ -3,6 +3,7 @@ package dev.toasttextures.carnival_cuisine;
 import dev.toasttextures.carnival_cuisine.blocks.tray.TrayEntity;
 import dev.toasttextures.carnival_cuisine.registries.CarnivalCuisineBlocks;
 import dev.toasttextures.carnival_cuisine.registries.CarnivalCuisineItems;
+import dev.toasttextures.carnival_cuisine.registries.CarnivalCuisineSounds;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.block.entity.BlockEntityType;
@@ -27,10 +28,9 @@ public class CarnivalCuisine implements ModInitializer {
 		// Proceed with mild caution.
 		CarnivalCuisineBlocks.registerBlocks();
 		CarnivalCuisineItems.registerItems();
-
+		CarnivalCuisineSounds.registerSounds();
 		TRAY_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(MOD_ID, "tray"), BlockEntityType.Builder.create(TrayEntity::new, CarnivalCuisineBlocks.TRAY).build(null));
 
 		Registry.register(Registries.ITEM_GROUP, Identifier.of(MOD_ID, "items"), CarnivalCuisineItems.CARNIVAL_ADDITIONS_GROUP);
-
 	}
 }

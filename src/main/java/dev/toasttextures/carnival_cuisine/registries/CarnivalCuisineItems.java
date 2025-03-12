@@ -22,6 +22,7 @@ public class CarnivalCuisineItems {
     public static final Item HOT_DOG = registerItem("hot_dog", new Food(new Item.Settings().food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).build())));
     public static final Item HOT_DOG_KETCHUP = registerItem("hot_dog_ketchup", new Food(new Item.Settings().food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).build())));
     public static final Item HOT_DOG_MUSTARD = registerItem("hot_dog_mustard", new Food(new Item.Settings().food(new FoodComponent.Builder().nutrition(5).saturationModifier(0.7f).build())));
+    public static final Item HOT_DOG_BOTH = registerItem("hot_dog_both", new Food(new Item.Settings().food(new FoodComponent.Builder().nutrition(7).saturationModifier(0.7f).build())));
 
     public static final Item BURGER = registerItem("burger", new Food(new Item.Settings().food(new FoodComponent.Builder().nutrition(10).saturationModifier(1.0F).build())));
     public static final Item SODA = registerItem("soda", new Drink(new Item.Settings().food(new FoodComponent.Builder().nutrition(4).build())));

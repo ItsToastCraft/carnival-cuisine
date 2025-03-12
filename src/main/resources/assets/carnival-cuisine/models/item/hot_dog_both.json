@@ -1,0 +1,6 @@
+{
+  "parent": "carnival-cuisine:item/hot_dog",
+  "textures": {
+    "hot_dog": "carnival-cuisine:item/hot_dog_both"
+  }
+}
