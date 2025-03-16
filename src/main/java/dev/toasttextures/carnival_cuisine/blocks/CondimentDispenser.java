@@ -81,7 +81,6 @@ public class CondimentDispenser extends Block {
             applyEffects((ServerWorld) world,pos,stack,player);
             scheduleTick(world,pos);
         } else if (this.isOpposite(stack)) {
-            CarnivalCuisine.LOGGER.info("Playing sound...");
             scheduleTick(world,pos);
             applyEffects((ServerWorld) world,pos,stack,player);
             player.getInventory().offerOrDrop(new ItemStack(CarnivalCuisineItems.HOT_DOG_BOTH));
