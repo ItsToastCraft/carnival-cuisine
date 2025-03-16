@@ -1,0 +1,84 @@
+{
+  "variants": {
+    "delay=0,facing=east": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_0",
+      "uvlock": false,
+      "y": 90
+    },
+    "delay=0,facing=north": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_0",
+      "uvlock": false,
+      "y": 0
+    },
+    "delay=0,facing=south": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_0",
+      "uvlock": false,
+      "y": 180
+    },
+    "delay=0,facing=west": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_0",
+      "uvlock": false,
+      "y": 270
+    },
+    "delay=1,facing=east": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_1",
+      "uvlock": false,
+      "y": 90
+    },
+    "delay=1,facing=north": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_1",
+      "uvlock": false,
+      "y": 0
+    },
+    "delay=1,facing=south": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_1",
+      "uvlock": false,
+      "y": 180
+    },
+    "delay=1,facing=west": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_1",
+      "uvlock": false,
+      "y": 270
+    },
+    "delay=2,facing=east": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_2",
+      "uvlock": false,
+      "y": 90
+    },
+    "delay=2,facing=north": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_2",
+      "uvlock": false,
+      "y": 0
+    },
+    "delay=2,facing=south": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_2",
+      "uvlock": false,
+      "y": 180
+    },
+    "delay=2,facing=west": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_2",
+      "uvlock": false,
+      "y": 270
+    },
+    "delay=3,facing=east": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_3",
+      "uvlock": false,
+      "y": 90
+    },
+    "delay=3,facing=north": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_3",
+      "uvlock": false,
+      "y": 0
+    },
+    "delay=3,facing=south": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_3",
+      "uvlock": false,
+      "y": 180
+    },
+    "delay=3,facing=west": {
+      "model": "carnival-cuisine:block/ketchup_dispenser_3",
+      "uvlock": false,
+      "y": 270
+    }
+  }
+}

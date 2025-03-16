@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "delay=0": { "model": "carnival-cuisine:block/ketchup_dispenser_0"},
-    "delay=1": { "model": "carnival-cuisine:block/ketchup_dispenser_1"},
-    "delay=2": { "model": "carnival-cuisine:block/ketchup_dispenser_2"},
-    "delay=3": { "model": "carnival-cuisine:block/ketchup_dispenser_3"}
-  }
-}

@@ -18,20 +18,8 @@ repositories {
 	// for more information about repositories.
 }
 
-loom {
-    splitEnvironmentSourceSets()
-
-	mods {
-		"carnival-cuisine" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
-
-}
-
 fabricApi {
-	configureDataGeneration()
+    configureDataGeneration()
 }
 
 dependencies {
@@ -42,11 +30,11 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
 }
 
 processResources {
-	inputs.property "version", project.version
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    inputs.property "version", project.version
 
 	filesMatching("fabric.mod.json") {
 		expand "version": project.version
@@ -54,7 +42,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 21
+    it.options.release = 21
 }
 
 java {
@@ -67,26 +55,77 @@ java {
 	targetCompatibility = JavaVersion.VERSION_21
 }
 
-jar {
-	from("LICENSE") {
-		rename { "${it}_${project.base.archivesName.get()}"}
-	}
+loom {
+    // ... (Whatever exists here)
+    splitEnvironmentSourceSets()
+    mods {
+        "carnival-cuisine" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+    runs {
+        // This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
+        datagen {
+            inherit server
+            name "Data Generation"
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+            vmArg "-Dfabric-api.datagen.modid=${modid}"
+
+            runDir "build/datagen"
+        }
+    }
 }
+
+tasks.named("runDatagen") {
+    outputs.dir("src/main/generated")
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from("src/main/resources")
+    from("src/main/generated")
+    from("LICENSE") {
+        rename { "${it}_${project.base.archivesName.get()}"}
+    }
+
+    dependsOn(runDatagen)
+    from("src/main/generated") {
+        exclude ".cache"
+    }
+}
+
+clean.delete("src/main/generated")
+
+sourcesJar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from("src/main/resources")
+    from("src/main/generated")
+    from("LICENSE") {
+        rename { "${it}_${project.base.archivesName.get()}"}
+    }
+
+    mustRunAfter(runDatagen)
+    from("src/main/generated") {
+        exclude(".cache")
+    }
+}
+
 
 // configure the maven publication
 publishing {
-	publications {
-		create("mavenJava", MavenPublication) {
-			artifactId = project.archives_base_name
-			from components.java
-		}
-	}
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
 
-	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
-	}
+    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+    repositories {
+        // Add repositories to publish to here.
+        // Notice: This block does NOT have the same function as the block in the top level.
+        // The repositories here will be used for publishing your artifact, not for
+        // retrieving dependencies.
+    }
 }

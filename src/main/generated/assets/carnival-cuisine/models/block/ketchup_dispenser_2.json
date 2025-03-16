@@ -1,0 +1,6 @@
+{
+  "parent": "carnival-cuisine:block/condiment_dispenser_2",
+  "textures": {
+    "dispenser": "carnival-cuisine:block/ketchup_dispenser"
+  }
+}

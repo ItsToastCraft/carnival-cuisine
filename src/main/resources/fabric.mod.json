@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"dev.toasttextures.carnival_cuisine.CarnivalCuisineClient"
+		],
+		"fabric-datagen": [
+			"dev.toasttextures.carnival_cuisine.datagen.CarnivalCuisineDataGenerator"
 		]
 	},
 	"depends": {
